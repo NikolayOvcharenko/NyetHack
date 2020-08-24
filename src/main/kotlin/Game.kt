@@ -48,5 +48,17 @@ private fun formatHealthStatus(healthPoint: Int, isBlessed: Boolean): String =
             // return healthStatus
         }
 
-private fun castFireball(numFireballs: Int = 2) =
-        println("A glass of Fireball springs into existence. (x$numFireballs)")
+private fun castFireball(numFireballs: Int = 2) {
+    println("A glass of Fireball springs into existence. (x$numFireballs)")
+    println (when(numFireballs) {
+        in 1..10 -> "Tipsy"     // навеселе
+        in 11..20 -> "Sloshed"  // выпивши
+        in 21..30 -> "Soused"   // пьяный
+        in 31..40 -> "Stewed"   // сильно пьяный
+        else -> "t0aSt3d"       // в стельку
+    })
+}
+
+fun shouldReturnAString(): String {
+    TODO("implement the string building functionality here to return a string")
+}
